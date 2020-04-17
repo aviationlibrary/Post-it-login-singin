@@ -1,0 +1,248 @@
+ * {
+     box-sizing: border-box;
+ }
+
+ body {
+    height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: -20px 0 50px;
+     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(https://previews.123rf.com/images/sirastock/sirastock1805/sirastock180500106/101845928-workplace-background-for-designers-with-blank-white-screen-modern-desktop-computer-keyboard-crayon-p.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+h2 {
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    font-weight: bold;
+    color: purple;
+}
+
+.side h2 {
+    color: #fff;
+}
+
+.side p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+}
+
+span {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    color: purple;
+    margin-top: 20px ;
+}
+
+.radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    min-width: 220px;
+    width: 100%;
+    padding: 20px;
+    
+}
+
+
+
+.main-container {
+    background:#fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.form-container form {
+    height: 100%;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+}
+
+.link-media a{
+    border: 1px solid grey;
+    border-radius: 50%;
+    padding: 5px;
+    color: #fff;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: purple; 
+}
+
+.link-media a:hover {
+    color: blue;
+}
+
+.link-media a:active {
+    transform: scale(0.95);
+}
+
+.form-container input {
+    background:lightgrey;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    margin: 5px 0;
+    width: 100%;
+    padding: 8px 10px;
+
+}
+
+.form-container .radio {
+    color: purple;
+    font-size: large;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+}
+
+.anchor{
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    color: purple;
+}
+
+.anchor:hover {
+    color: blue;
+}
+
+.anchor:active {
+    transform: scale(0.95);
+}
+
+button {
+    border: 1px solid purple;
+    border-radius: 15px;
+    color: #fff;
+    background: purple;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    font-weight: bold;
+    transition: transform 80ms ease-in-out;
+}
+
+button.side-enter {
+    border: 1px solid #fff;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+ button:focus {
+     outline: none;
+ }
+
+ .form-container {
+     position: absolute;
+     top: 0;
+     height: 100%;
+     transition: all 0.7s ease-in-out;
+ }
+
+ .sign-in {
+     left: 0;
+     width: 50%;
+     z-index: 2;
+ }
+
+ .join-us {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.side-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    transition: transform 0.7s ease-in-out;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.information{
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    color: #fff;
+    background: purple;
+    transform: translateX(0);
+    transition: transform 0.7s ease-in-out;
+}
+
+.side {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 40px;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.7s ease-in-out;
+}
+
+.sideright {
+    right: 0;
+    transform: translateX(0%);
+}
+
+.sideleft {
+    transform: translateX(-20%);
+}
+
+ .main-container.switch-over .sign-in {
+     transform: translateX(100%);
+ }
+
+ .main-container.switch-over .side-container {
+     transform: translateX(-100%);
+ }
+
+ .main-container.switch-over .join-us {
+     opacity: 1;
+     z-index: 3;
+     transform: translateX( 100%);
+ }
+
+ .main-container.switch-over .information{
+     transform: translateX(50%);
+ }
+
+ .main-container.switch-over .sideleft  {
+    transform: translateX(0);
+}
+
+.main-container.switch-over .sideright {
+    transform: translateX(20%);
+} 
+
+ 
